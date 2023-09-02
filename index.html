@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      $(document).ready(function () {
+        var i = 1;
+        $(".add").on("click", function () {
+          console.log("eneter");
+          var field =
+            "<br><div>Link URL " +
+            i +
+            ': <input type="text" name="blog_linku_one[]"> &nbsp; Link Name ' +
+            i +
+            ':  <input type="text" name="blog_linkn_one[]"></div>';
+          $(".appending_div").append(field);
+          i = i + 1;
+        });
+      });
+    </script>
+  </body>
+</html>
